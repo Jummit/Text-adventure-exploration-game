@@ -7,49 +7,12 @@ function newResearch(name, keyWords, gettedFunc)
     gettedFunc = gettedFunc
   }
 end
-
-local researches = {
-  newResearch(
-    "The truth about this game",
-    {
-      "game", "what", "to do"
-    },
-    function()
-      print("You Won!!!")
-      os.exit()
-    end
-  ),
-  newResearch(
-    "first steps",
-    {
-      "it"
-    },
-    function()
-    end
-  ),
-  newResearch(
-    "Where is the wiki?",
-    {
-      "wiki",
-      "is"
-    },
-    function()
-    end
-  ),
-  newResearch(
-    "No way home",
-    {
-      "go",
-      "tower"
-    }
-  )
-}
+local places = {}
+local researches = {}
+local localplace
 local character = {
   researches = {},
-  notes = {
-  },
-  addNote = function()
-  end,
+  notes = {}
 }
 
 function input()
@@ -223,9 +186,6 @@ function newPlace(name, description, ways, note, enterFunc)
     enterFunc = enterFunc
   }
 end
-
-local places = {}
-local localplace
 
 function go()
   inputChar = "Go to "
